@@ -8,13 +8,11 @@ namespace SingletonLazy
 
         public static ClassLazySingleton Instance => _instance.Value;
 
-#pragma warning disable CS0628 // The new protected member is declared in a sealed class
         private ClassLazySingleton() { }
-#pragma warning restore CS0628 // The new protected member is declared in a sealed class
 
-        public static void SomeStaticMethod()
+        public void SomeNonStaticMethod()
         {
-            Console.WriteLine(@"call public static void SomeStaticMethod()");
+            Console.WriteLine(@"call public void SomeNonStaticMethod()");
         }
     }
 }
