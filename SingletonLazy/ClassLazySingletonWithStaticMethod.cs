@@ -6,7 +6,7 @@ namespace SingletonLazy
     {
         private static readonly Lazy<ClassLazySingletonWithStaticMethod> _instance = new Lazy<ClassLazySingletonWithStaticMethod>(() => new ClassLazySingletonWithStaticMethod());
 
-        public static ClassLazySingletonWithStaticMethod Instance => _instance.Value;
+        public static ClassLazySingletonWithStaticMethod Instance { get { return _instance.Value; } }
 
         private ClassLazySingletonWithStaticMethod() { }
 
