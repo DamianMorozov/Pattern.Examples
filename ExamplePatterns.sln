@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonDoubleCkeckedLock"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonFieldInitializer", "SingletonFieldInitializer\SingletonFieldInitializer.csproj", "{9E71810E-05DF-4737-956D-644401808943}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{05EA6BD8-6C12-4BBD-965D-84ADFDAD8B3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9E71810E-05DF-4737-956D-644401808943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E71810E-05DF-4737-956D-644401808943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E71810E-05DF-4737-956D-644401808943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EA6BD8-6C12-4BBD-965D-84ADFDAD8B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EA6BD8-6C12-4BBD-965D-84ADFDAD8B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EA6BD8-6C12-4BBD-965D-84ADFDAD8B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EA6BD8-6C12-4BBD-965D-84ADFDAD8B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,15 @@ SingletonLazy - Example of Lazy Singleton
 .NET Framework 4.0
 C# 4.0
 ----------------------------------------------------------------------------------------------------
-SingletonDoubleCkeckedLock - Example of Double check lock Singleton
+SingletonDoubleCkeckedLock - Example of double check lock Singleton
 .NET Framework 3.5
 C# 3.0
+----------------------------------------------------------------------------------------------------
+SingletonFieldInitializer - Example of field initializer Singleton
+.NET Framework 3.5
+C# 3.0
+----------------------------------------------------------------------------------------------------
+Strategy - Example of Strategy
+.NET Framework 4.7.2
+C# 7.3
 ----------------------------------------------------------------------------------------------------
