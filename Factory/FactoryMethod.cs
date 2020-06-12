@@ -4,8 +4,9 @@ namespace Factory
 {
     internal abstract class House
     {
-        public string Address { get; set; }
-        public House(string address)
+        protected string Address { get; }
+
+        protected House(string address)
         {
             Address = address;
         }
@@ -29,14 +30,14 @@ namespace Factory
 
     internal abstract class Developer
     {
-        public Developer(string name)
+        protected Developer(string name)
         {
             Name = name;
         }
 
-        public string Name { get; set; }
+        protected string Name { get; }
 
-        abstract public House Create(string address);
+        public abstract House Create(string address);
     }
 
     internal class PanelDeveloper : Developer
