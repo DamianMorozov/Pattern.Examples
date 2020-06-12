@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Strategy
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine(@"----------------------------------------------------------------------");
             Console.WriteLine(@"---            Examples of program development patterns            ---");
@@ -29,7 +29,7 @@ namespace Strategy
             Console.ReadLine();
         }
 
-        static void UseFunctor(List<string> listNames)
+        private static void UseFunctor(IEnumerable<string> listNames)
         {
             Console.WriteLine(@"Use functor.");
 
@@ -53,7 +53,7 @@ namespace Strategy
             }
         }
 
-        static void UseDelegate(List<string> listNames)
+        private static void UseDelegate(IEnumerable<string> listNames)
         {
             Console.WriteLine(@"Use delegate.");
 
@@ -68,7 +68,7 @@ namespace Strategy
                 i--;
             }
 
-            Console.WriteLine(@"listEmployees.Sort((x, y) => x.Name.CompareTo(y.Name));");
+            Console.WriteLine(@"listEmployees.Sort((x, y) => x.Id.CompareTo(y.Id));");
             listEmployees.Sort((x, y) => x.Id.CompareTo(y.Id));
 
             foreach (var item in listEmployees)

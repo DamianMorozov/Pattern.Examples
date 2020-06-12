@@ -2,9 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.1.12] - 2020-06-12
+## [0.1.13] - 2020-06-12
 ### Updated
   [+] Factory project.
+  [+] Strategy project.
 
 ## [0.1.11] - 2020-06-11
 ### Added

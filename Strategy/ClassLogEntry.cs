@@ -2,7 +2,7 @@
 
 namespace Strategy
 {
-    internal class ClassLogEntry : ILogReader
+    internal abstract class ClassLogEntry : ILogReader
     {
         public DateTime DTime { get; set; }
         public string Message { get; set; }

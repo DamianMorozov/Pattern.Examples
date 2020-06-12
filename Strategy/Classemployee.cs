@@ -5,8 +5,8 @@ namespace Strategy
 {
     internal class ClassEmployee
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int Id { get; }
+        public string Name { get; }
 
         public ClassEmployee(int id, string name)
         {
@@ -24,7 +24,9 @@ namespace Strategy
     {
         public int Compare(ClassEmployee x, ClassEmployee y)
         {
-            return x.Id.CompareTo(y.Id);
+            if (x != null && y != null)
+                return x.Id.CompareTo(y.Id);
+            return default;
         }
     }
 }
