@@ -1,14 +1,17 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace SingletonFieldInitializer
+namespace AbstractFactory
 {
-    internal class Program
+    class Program
     {
-        private static void Main()
+        static void Main(string[] args)
         {
             Console.WriteLine(@"----------------------------------------------------------------------");
             Console.WriteLine(@"---            Examples of program development patterns            ---");
-            Console.WriteLine(@"---                  Field initializer Singleton                   ---");
+            Console.WriteLine(@"---                        Abstract Factory                        ---");
             Console.WriteLine(@"----------------------------------------------------------------------");
 
             var fieldInitializerSingleton = ClassFieldInitializerSingleton.Instance;

@@ -1,16 +1,16 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("SingletonDoubleCkeckedLock")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DesignPatterns")]
+[assembly: AssemblyDescription("Design patterns")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SingletonDoubleCkeckedLock")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("Morozov Damian")]
+[assembly: AssemblyProduct("DesignPatterns")]
+[assembly: AssemblyCopyright("Copyright © 2018-2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("93778d86-ad6d-4623-ad13-310fe8a6ebd6")]
+[assembly: Guid("b6d26d2c-fcaa-4644-b8e4-1ba8390483eb")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
@@ -32,5 +32,6 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.2.10.0")]
+[assembly: AssemblyFileVersion("0.2.10.0")]
+[assembly: NeutralResourcesLanguage("en-US")]

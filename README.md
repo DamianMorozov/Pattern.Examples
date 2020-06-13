@@ -1,11 +1,11 @@
 # Examples of program development patterns.
 
-## Factory - Factory method
-
-## SingletonLazy - Lazy Singleton
-
-## SingletonDoubleCkeckedLock - Double check lock Singleton
-
-## SingletonFieldInitializer - Field initializer Singleton
-
-## Strategy - Strategy
+## DesignPatterns project:
+- Factory
+  - Abstract factory
+  - Factory method
+- Singleton
+  - Lazy singleton
+  - Double check lock singleton
+  - Field initializer singleton
+- Strategy

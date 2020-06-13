@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Factory
+namespace DesignPatterns.Factory
 {
     internal abstract class House
     {

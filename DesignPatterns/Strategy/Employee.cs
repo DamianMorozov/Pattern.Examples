@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Strategy
+namespace DesignPatterns.Strategy
 {
-    internal class ClassEmployee
+    internal class Employee
     {
         public int Id { get; }
         public string Name { get; }
 
-        public ClassEmployee(int id, string name)
+        public Employee(int id, string name)
         {
             Id = id;
             Name = name ?? throw new ArgumentNullException(nameof(name));
@@ -20,9 +20,9 @@ namespace Strategy
         }
     }
 
-    internal class ClassEmployeeByIdComparer : IComparer<ClassEmployee>
+    internal class EmployeeByIdComparer : IComparer<Employee>
     {
-        public int Compare(ClassEmployee x, ClassEmployee y)
+        public int Compare(Employee x, Employee y)
         {
             if (x != null && y != null)
                 return x.Id.CompareTo(y.Id);

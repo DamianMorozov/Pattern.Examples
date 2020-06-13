@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace SingletonDoubleCkeckedLock
+namespace DesignPatterns.Singleton
 {
-    public class ClassDoubleCheckedLockSingleton
+    internal class DoubleCheckedLockSingleton
     {
-        private static volatile ClassDoubleCheckedLockSingleton _instance;
+        private static volatile DoubleCheckedLockSingleton _instance;
         private static readonly object _syncRoot = new object();
-        public static ClassDoubleCheckedLockSingleton Instance
+        public static DoubleCheckedLockSingleton Instance
         {
             get
             {
@@ -16,7 +16,7 @@ namespace SingletonDoubleCkeckedLock
                     {
                         if (_instance == null)
                         {
-                            _instance = new ClassDoubleCheckedLockSingleton();
+                            _instance = new DoubleCheckedLockSingleton();
                         }
                     }
                 }
@@ -24,7 +24,7 @@ namespace SingletonDoubleCkeckedLock
             }
         }
 
-        private ClassDoubleCheckedLockSingleton() { }
+        private DoubleCheckedLockSingleton() { }
 
         public void SomeNonStaticMethod()
         {

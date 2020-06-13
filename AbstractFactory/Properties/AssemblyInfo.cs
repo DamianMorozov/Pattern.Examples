@@ -1,15 +1,16 @@
-﻿using System.Reflection;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Factory")]
+[assembly: AssemblyTitle("AbstractFactory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Factory")]
-[assembly: AssemblyCopyright("Copyright © 2020")]
+[assembly: AssemblyProduct("AbstractFactory")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1780a27b-b914-4cac-ac7c-a07ed18e6d9c")]
+[assembly: Guid("6e65e4c4-6294-4164-9c57-3edb99acefa0")]
 
 // Version information for an assembly consists of the following four values:
 //
