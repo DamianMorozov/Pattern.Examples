@@ -1,9 +1,11 @@
-# Examples of program development patterns.
+# Examples of program development patterns
 
-## DesignPatterns project:
+## DesignPatterns project
 - Factory
   - Abstract factory
   - Factory method
+- IDisposable
+  - DisposableExample
 - Singleton
   - Lazy singleton
   - Double check lock singleton
