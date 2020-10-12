@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Common;
+using System.IO;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
 using DesignPatterns.Strategy;
@@ -10,6 +11,12 @@ namespace DesignPatterns
 {
     internal static class Program
     {
+        #region Public and private fields and properties
+
+        private const string FileName = @"..\..\..\LICENSE.md";
+
+        #endregion
+
         #region Main methods
 
         private static void Main()
@@ -333,10 +340,20 @@ namespace DesignPatterns
             Console.WriteLine(@"---               IDisposable textReader without secure            ---");
             Console.WriteLine(@"----------------------------------------------------------------------");
 
-            var listNames = new List<string>() {
-                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
-
-            Console.WriteLine(@"----------------------------------------------------------------------");
+            if (File.Exists(FileName))
+            {
+                var reader = new StreamReader(FileName);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+                reader.Close();
+            }
+            else
+            {
+                Console.WriteLine($@"File [{Path.GetFileName(FileName)}] is not exists");
+            }
         }
 
         private static void PrintIDisposableTextReaderWithSecure()
@@ -346,10 +363,26 @@ namespace DesignPatterns
             Console.WriteLine(@"---                IDisposable textReader with secure              ---");
             Console.WriteLine(@"----------------------------------------------------------------------");
 
-            var listNames = new List<string>() {
-                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
-
-            Console.WriteLine(@"----------------------------------------------------------------------");
+            if (File.Exists(FileName))
+            {
+                var reader = new StreamReader(FileName);
+                try
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+                finally
+                {
+                    reader.Close();
+                }
+            }
+            else
+            {
+                Console.WriteLine($@"File [{Path.GetFileName(FileName)}] is not exists");
+            }
         }
 
         private static void PrintIDisposableTextReaderWithUsing()
@@ -359,10 +392,19 @@ namespace DesignPatterns
             Console.WriteLine(@"---                 IDisposable textReader with using              ---");
             Console.WriteLine(@"----------------------------------------------------------------------");
 
-            var listNames = new List<string>() {
-                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
-
-            Console.WriteLine(@"----------------------------------------------------------------------");
+            if (File.Exists(FileName))
+            {
+                using var reader = new StreamReader(FileName);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else
+            {
+                Console.WriteLine($@"File [{Path.GetFileName(FileName)}] is not exists");
+            }
         }
 
         private static void PrintIDisposableTextReaderWithClass()
@@ -372,10 +414,15 @@ namespace DesignPatterns
             Console.WriteLine(@"---                 IDisposable textReader with class              ---");
             Console.WriteLine(@"----------------------------------------------------------------------");
 
-            var listNames = new List<string>() {
-                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
-
-            Console.WriteLine(@"----------------------------------------------------------------------");
+            if (File.Exists(FileName))
+            {
+                using var example = new IDisposable.DisposableExample(FileName);
+                Console.WriteLine(example.ReadFile().ToString());
+            }
+            else
+            {
+                Console.WriteLine($@"File [{Path.GetFileName(FileName)}] is not exists");
+            }
         }
 
         #endregion
