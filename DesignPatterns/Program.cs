@@ -46,6 +46,10 @@ namespace DesignPatterns
             Console.WriteLine("22. Double check lock singleton.");
             Console.WriteLine("23. Field initializer singleton.");
             Console.WriteLine("31. Strategy.");
+            Console.WriteLine("41. IDisposable textReader without secure.");
+            Console.WriteLine("42. IDisposable textReader with secure.");
+            Console.WriteLine("43. IDisposable textReader with using.");
+            Console.WriteLine("44. IDisposable textReader with class.");
             Console.WriteLine(@"----------------------------------------------------------------------");
             Console.Write("Type switch: ");
         }
@@ -79,6 +83,22 @@ namespace DesignPatterns
                 case 31:
                     isPrintMenu = true;
                     PrintStrategy();
+                    break;
+                case 41:
+                    isPrintMenu = true;
+                    PrintIDisposableTextReaderWithoutSecure();
+                    break;
+                case 42:
+                    isPrintMenu = true;
+                    PrintIDisposableTextReaderWithSecure();
+                    break;
+                case 43:
+                    isPrintMenu = true;
+                    PrintIDisposableTextReaderWithUsing();
+                    break;
+                case 44:
+                    isPrintMenu = true;
+                    PrintIDisposableTextReaderWithClass();
                     break;
             }
             if (isPrintMenu)
@@ -300,6 +320,62 @@ namespace DesignPatterns
             {
                 Console.WriteLine(item.ToString());
             }
+        }
+
+        #endregion
+
+        #region IDisposable
+
+        private static void PrintIDisposableTextReaderWithoutSecure()
+        {
+            Console.WriteLine(@"----------------------------------------------------------------------");
+            Console.WriteLine(@"---                   Examples of design patterns                  ---");
+            Console.WriteLine(@"---               IDisposable textReader without secure            ---");
+            Console.WriteLine(@"----------------------------------------------------------------------");
+
+            var listNames = new List<string>() {
+                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
+
+            Console.WriteLine(@"----------------------------------------------------------------------");
+        }
+
+        private static void PrintIDisposableTextReaderWithSecure()
+        {
+            Console.WriteLine(@"----------------------------------------------------------------------");
+            Console.WriteLine(@"---                   Examples of design patterns                  ---");
+            Console.WriteLine(@"---                IDisposable textReader with secure              ---");
+            Console.WriteLine(@"----------------------------------------------------------------------");
+
+            var listNames = new List<string>() {
+                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
+
+            Console.WriteLine(@"----------------------------------------------------------------------");
+        }
+
+        private static void PrintIDisposableTextReaderWithUsing()
+        {
+            Console.WriteLine(@"----------------------------------------------------------------------");
+            Console.WriteLine(@"---                   Examples of design patterns                  ---");
+            Console.WriteLine(@"---                 IDisposable textReader with using              ---");
+            Console.WriteLine(@"----------------------------------------------------------------------");
+
+            var listNames = new List<string>() {
+                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
+
+            Console.WriteLine(@"----------------------------------------------------------------------");
+        }
+
+        private static void PrintIDisposableTextReaderWithClass()
+        {
+            Console.WriteLine(@"----------------------------------------------------------------------");
+            Console.WriteLine(@"---                   Examples of design patterns                  ---");
+            Console.WriteLine(@"---                 IDisposable textReader with class              ---");
+            Console.WriteLine(@"----------------------------------------------------------------------");
+
+            var listNames = new List<string>() {
+                "Orlando", "Rod", "John", "Ben", "Erich", "Eddie", "Oscar", "Jason", "Rocky", "Rey" };
+
+            Console.WriteLine(@"----------------------------------------------------------------------");
         }
 
         #endregion

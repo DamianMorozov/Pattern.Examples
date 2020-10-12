@@ -48,6 +48,7 @@
     <Compile Include="Factory\AbstractFactory.cs" />
     <Compile Include="Factory\EnumDbProvider.cs" />
     <Compile Include="Factory\FactoryMethod.cs" />
+    <Compile Include="IDisposable\DisposableExample.cs" />
     <Compile Include="Singleton\DoubleCheckedLockSingleton.cs" />
     <Compile Include="Singleton\FieldBasedSingleton.cs" />
     <Compile Include="Singleton\FieldInitializerSingleton.cs" />
